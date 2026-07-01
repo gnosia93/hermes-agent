@@ -84,3 +84,6 @@ hermes setup model
 *	Inference Profile ID 권한 장장 (강추): 모델 ID를 적을 때 anthropic.claude-sonnet-4-6 처럼 베어(Bare) ID를 적는 것보다, 위 예시처럼 us.anthropic.claude-sonnet-4-6 같은 크로스 리전 추론 프로필(Cross-Region Inference Profile) ID를 사용하는 것을 강력히 권장합니다. 트래픽 유연성과 처리 속도(Throughput)가 훨씬 뛰어납니다.
 *	IAM 권한 확인: 인증에 사용하는 IAM 사용자나 역할(Role)에 최소한 bedrock:InvokeModel 및 bedrock:InvokeModelWithResponseStream 권한이 포함되어 있어야 헤르메스가 답변을 스트리밍으로 받아올 수 있습니다.
 
+
+## 레퍼런스 ##
+* https://hermes-agent.nousresearch.com/

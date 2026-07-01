@@ -53,7 +53,7 @@ EOF
 수정 후 docker compose restart 명령어로 에이전트를 재시작하면 모든 세팅이 완료됩니다.
 이제 Hermes Agent는 유저가 텔레그램, 디스코드, 혹은 웹 UI를 통해 내리는 명령을 안전하게 수신하며, 위험한 터미널 명령어나 스크립트를 실행할 때마다 지정된 Python 컨테이너를 임시로 띄워 그 안에서만 안전하게 연산을 수행하게 됩니다. 완벽하게 격리된 AI 개발 환경이 Mac 미니에 성공적으로 구축된 것입니다.
 
-### AWS Bedrock 연결하기 ###
+### 5. AWS Bedrock 연결하기 ###
 #### 1단계: 도커 컨테이너에 AWS 권한 주기 (.env) ####
 도커 컨테이너 안에 있는 헤르메스가 외부 AWS Bedrock API를 호출하려면, 먼저 로그인 자격 증명(Credentials)을 쥐여주어야 합니다. 헤르메스 디렉토리의 .env 파일에 AWS 인증 정보를 추가합니다.
 ```
@@ -83,6 +83,15 @@ hermes setup model
 * AWS 콘솔에서 모델 권한 활성화: 설정하기 전에 반드시 AWS Bedrock 콘솔의 Model access 메뉴에서 사용하려는 모델(예: Anthropic Claude 3.5 Sonnet 등)의 접근 권한이 Granted(승인됨) 상태인지 확인해야 합니다.
 *	Inference Profile ID 권한 장장 (강추): 모델 ID를 적을 때 anthropic.claude-sonnet-4-6 처럼 베어(Bare) ID를 적는 것보다, 위 예시처럼 us.anthropic.claude-sonnet-4-6 같은 크로스 리전 추론 프로필(Cross-Region Inference Profile) ID를 사용하는 것을 강력히 권장합니다. 트래픽 유연성과 처리 속도(Throughput)가 훨씬 뛰어납니다.
 *	IAM 권한 확인: 인증에 사용하는 IAM 사용자나 역할(Role)에 최소한 bedrock:InvokeModel 및 bedrock:InvokeModelWithResponseStream 권한이 포함되어 있어야 헤르메스가 답변을 스트리밍으로 받아올 수 있습니다.
+
+
+### 6. 인터랙티브 프롬프트 ###
+
+```
+docker ps
+docker exec -it <컨테이너_이름> hermes
+```
+터미널 창이 즉시 Hermes > 대화 모드로 전환됩니다.
 
 
 ## 레퍼런스 ##

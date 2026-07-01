@@ -87,12 +87,22 @@ hermes setup model
 
 ### 6. 인터랙티브 프롬프트 ###
 
+#### CLI ####
+
 ```
 docker ps
 docker exec -it <컨테이너_이름> hermes
 ```
 터미널 창이 즉시 Hermes > 대화 모드로 전환됩니다.
 
+
+#### GUI ####
+```
+docker ps
+
+```
+docker ps 의 출력 결과 중 PORTS 부분에 0.0.0.0:3000->3000/tcp 같은 내용이 보인다면 GUI 준비가 끝난 것입니다. (헤르메스 전용 WebUI는 보통 3000번이나 8642번을 씁니다.) 
+크롬이나 사파리를 열고 http://localhost:3000 로 접속합니다.
 
 ## 레퍼런스 ##
 * https://hermes-agent.nousresearch.com/

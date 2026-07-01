@@ -4,7 +4,9 @@
 ```
 # 1. hermes 폴더 생성 및 이동
 mkdir -p ~/hermes-agent && cd ~/hermes-agent
+```
 
+```
 # 2. 설정 파일 만들기 (nano 또는 편한 에디터 사용)
 cat <<EOF > docker-compose.yml
 version: "3.8"

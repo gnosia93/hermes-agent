@@ -1,8 +1,8 @@
 # hermes-agent
 
-* [에어전트 LLM 선정하기](https://github.com/gnosia93/hermes-agent/blob/main/llm/readmd.md)
+* [1. 에어전트 LLM 선정하기](https://github.com/gnosia93/hermes-agent/blob/main/lecture/1-agent-llm-selection.md)
 
-* [헤르메스 설치하기]()
+* [2. 헤르메스 설치하기]()
 
 ### 1. docker 확인 ###
 ```

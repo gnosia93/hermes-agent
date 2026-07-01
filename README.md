@@ -6,7 +6,7 @@
 
 * [3. 종목 추천 에이전트 개발](https://github.com/gnosia93/hermes-agent/blob/main/lecture/3-stock-recommendation.md)
   - [최신 테크 트랜드](https://github.com/gnosia93/hermes-agent/blob/main/lecture/3-tech-trend.md)
-     - [양자 컴퓨팅]()
+     - [양자 컴퓨팅](https://github.com/gnosia93/hermes-agent/blob/main/lecture/3-1.quantum-computing.md)
      - 
 
 ### 1. docker 확인 ###

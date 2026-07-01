@@ -5,7 +5,7 @@
 * [2. 헤르메스 설치하기]()
 
 * [3. 종목 추천 에이전트 개발](https://github.com/gnosia93/hermes-agent/blob/main/lecture/3-stock-recommendation.md)
-
+  - [최신 테크 트랜드]()
 
 ### 1. docker 확인 ###
 ```

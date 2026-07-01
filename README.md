@@ -1,7 +1,11 @@
 # hermes-agent
 
+### 1. docker 확인 ###
+```
+docker context ls
+```
 
-### 1. 작업 폴더 및 docker-compose.yml 생성 ###
+### 2. 작업 폴더 및 docker-compose.yml 생성 ###
 ```bash
 # 1. hermes 폴더 생성 및 이동
 mkdir -p ~/hermes-agent && cd ~/hermes-agent
@@ -27,14 +31,14 @@ services:
 EOF
 ```
 
-### 2. 에이전트 엔진 구동 ###
+### 3. 에이전트 엔진 구동 ###
 ```bash
 docker compose up -d
 ```
 이 명령어를 치면 Docker가 알아서 공식 Nous Research 이미지를 다운로드하고 서버를 올립니다. 최초 실행이 완료되면 호스트 머신의 ~/.hermes/ 디렉토리에 에이전트의 기본 설정 파일들이 자동으로 생성됩니다.
 
 
-### 3. 샌드박스(실험실) 격리 설정 적용 ###
+### 4. 샌드박스(실험실) 격리 설정 적용 ###
 ```
 cat <<EOF > ~/.hermes/config.yaml
 # 기존 로컬(local)로 되어 있던 백엔드를 docker로 변경
